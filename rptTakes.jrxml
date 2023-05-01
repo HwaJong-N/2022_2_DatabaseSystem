@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptTakes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53e32027-1f6a-4a63-be7f-19b9301d4256">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="con2Project"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Take]]>
+	</queryString>
+	<field name="ST_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ST_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ST_ID"/>
+	</field>
+	<field name="SU_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SU_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="SU_ID"/>
+	</field>
+	<field name="retake" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="retake"/>
+		<property name="com.jaspersoft.studio.field.label" value="retake"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="220" y="20" width="290" height="35" uuid="4751583f-1b3c-4296-915c-f549b8f5781d"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Take's List"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="-3" y="10" width="573" height="1" uuid="02a5eba6-5a2a-4987-81e7-6265e2b5be31"/>
+			</line>
+			<line>
+				<reportElement x="-3" y="52" width="573" height="2" uuid="123225e5-be51-40e8-9904-114d6a6ef115"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="22" width="100" height="30" uuid="62d12ae0-f279-4e14-af21-83548e32e670">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="241d0dff-ad6c-4359-974e-07b93de7acdb"/>
+				</reportElement>
+				<text><![CDATA[ST_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="22" width="100" height="30" uuid="9b3aa316-e6ca-4a98-baca-a9d5f3c7c549">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d53f419-6965-4a4b-bb06-b047eb770e85"/>
+				</reportElement>
+				<text><![CDATA[SU_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="22" width="100" height="30" uuid="cc170520-b242-44ed-9981-0fd8aaed01a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e453fd2d-f74c-46af-a032-0b7507d38e83"/>
+				</reportElement>
+				<text><![CDATA[retake]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<line>
+				<reportElement x="-3" y="40" width="573" height="5" uuid="3c0aaef5-3c64-4874-8450-2bbea006e0da"/>
+			</line>
+			<textField>
+				<reportElement x="20" y="10" width="100" height="30" uuid="b28a407b-70d8-480c-8a14-e13f657dcd32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="241d0dff-ad6c-4359-974e-07b93de7acdb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ST_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="100" height="30" uuid="ad5655bf-5195-4c90-a6db-e52e01081865">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d53f419-6965-4a4b-bb06-b047eb770e85"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SU_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="10" width="100" height="30" uuid="91f2ad4d-7077-454b-a806-de62d0388a51">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e453fd2d-f74c-46af-a032-0b7507d38e83"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{retake}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

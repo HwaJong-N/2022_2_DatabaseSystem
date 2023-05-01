@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptPaper" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba68d702-e68d-480b-bbb7-a87970670e32">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="con2Project"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Paper]]>
+	</queryString>
+	<field name="PNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="PNo"/>
+	</field>
+	<field name="PTitle" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PTitle"/>
+		<property name="com.jaspersoft.studio.field.label" value="PTitle"/>
+	</field>
+	<field name="PPage" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PPage"/>
+		<property name="com.jaspersoft.studio.field.label" value="PPage"/>
+	</field>
+	<field name="PAcademy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PAcademy"/>
+		<property name="com.jaspersoft.studio.field.label" value="PAcademy"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="190" y="22" width="191" height="35" uuid="230ba623-02dd-480f-b1ab-0377e92b3cf2"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Paper's List"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="-3" y="7" width="560" height="2" uuid="af025e8e-b4ad-4b7f-b8af-369794901d7b"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="20" width="100" height="30" uuid="4baf1f6d-1e53-4454-898e-e629da78d5c5"/>
+				<text><![CDATA[PNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="20" width="100" height="30" uuid="f0587366-0216-4599-b362-1c31c8b16ce9"/>
+				<text><![CDATA[PTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="20" width="100" height="30" uuid="f84ad018-7ce7-4b3b-a24c-071d7f0fdfa1"/>
+				<text><![CDATA[PPage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="20" width="100" height="30" uuid="88af73cb-4f94-4d2e-9db7-38f295e8b703"/>
+				<text><![CDATA[PAcademy]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-5" width="560" height="2" uuid="8809a50f-1fda-428d-8585-ed6a7bd8d979"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="9" width="100" height="30" uuid="45b3eb7f-de43-4c18-9f86-ca11bb2de4be"/>
+				<textFieldExpression><![CDATA[$F{PNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="9" width="100" height="30" uuid="4f97706a-75bd-40a0-9c51-555ac27969f6"/>
+				<textFieldExpression><![CDATA[$F{PTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="9" width="100" height="30" uuid="d03b4433-bdd2-49a2-9cb8-d3afcf528a0b"/>
+				<textFieldExpression><![CDATA[$F{PPage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="9" width="100" height="30" uuid="b154697e-21be-4ad3-9b93-5d464d2c7bba"/>
+				<textFieldExpression><![CDATA[$F{PAcademy}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="-3" y="10" width="560" height="2" uuid="55188fe1-8279-4d8f-a5c7-5e46249375d1"/>
+			</line>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
